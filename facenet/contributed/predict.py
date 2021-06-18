@@ -111,10 +111,10 @@ def load_and_align_data(image_paths, image_size, margin, gpu_memory_fraction):
 
 def parse_arguments(argv):
     parser = argparse.ArgumentParser()
-    parser.add_argument('image_files', type=str, nargs='+', help='Path(s) of the image(s)')
-    parser.add_argument('model', type=str, 
+    parser.add_argument('--image_files', type=str, nargs='+', help='Path(s) of the image(s)')
+    parser.add_argument('--model', type=str, 
         help='Could be either a directory containing the meta_file and ckpt_file or a model protobuf (.pb) file')
-    parser.add_argument('classifier_filename', 
+    parser.add_argument('--classifier_filename', 
         help='Classifier model file name as a pickle (.pkl) file. ' + 
         'For training this is the output and for classification this is an input.')
     parser.add_argument('--image_size', type=int,
